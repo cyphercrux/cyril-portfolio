@@ -161,14 +161,14 @@ export const projects: Project[] = [
   },
   {
     slug: "pir-lighting",
-    title: "PIR Sensor-Based Automatic Lighting System",
-    shortTitle: "PIR Auto Lighting",
+    title: "PIR Sensor Lighting System",
+    shortTitle: "PIR Sensor Lighting System",
     categories: ["Embedded Systems", "Electrical Engineering"],
     status: "prototype",
     shortDescription:
       "An Arduino-based automatic lighting prototype that uses a PIR motion sensor to detect human movement and trigger a relay-controlled light. The project demonstrates sensor interfacing, microcontroller programming, and automated electrical switching for occupancy-based lighting applications.",
     overview: [
-      "The PIR Sensor-Based Automatic Lighting System automates lighting in response to detected human movement. The prototype combines an Arduino Uno, a PIR motion sensor, and a relay module to demonstrate how sensor inputs can be processed by a microcontroller to control an electrical load.",
+      "The PIR Sensor Lighting System automates lighting and electrical appliances in response to detected human movement. The prototype combines an Arduino Uno, an HC-SR501 PIR motion sensor, and a relay module to demonstrate how sensor inputs can be processed by a microcontroller to control electrical loads with automatic timing.",
       "The system is suitable as a foundation for occupancy-based lighting in classrooms, corridors, offices, and other indoor spaces.",
     ],
     problem: "Manual light switches in residential and institutional environments are frequently left powered on when rooms are unoccupied, generating persistent energy waste and shortened lamp lifespans.",
@@ -187,7 +187,7 @@ export const projects: Project[] = [
       "Automatic response to detected movement.",
       "Expandable design for occupancy-based lighting automation.",
     ],
-    technologies: ["Arduino Uno", "PIR Motion Sensor", "Relay Module", "Embedded C/C++", "Electrical Switching Hardware"],
+    technologies: ["Arduino Uno", "HC-SR501 PIR Sensor", "5V Relay Module", "Embedded C/C++", "Electrical Switching Hardware"],
     hardwareAndSoftware: null,
     contribution: null,
     implementation: null,
@@ -197,8 +197,16 @@ export const projects: Project[] = [
       "Constructed a responsive, automated motion-sensing lighting unit that reliably detects human presence, triggering instantaneous relay activation and achieving autonomous energy savings for indoor spaces.",
     cover: { src: `${P}/pir-lighting/cover.webp`, alt: "Arduino Uno wired to a PIR motion sensor and a relay module on a board", approved: true },
     diagrams: [],
-    gallery: [],
-    links: { github: "https://github.com/cyphercrux/pir-lighting-system", demo: null, docs: null, video: null },
+    gallery: [
+      {
+        src: `${P}/pir-lighting/pir-sensor-flow-diagram.webp`,
+        alt: "PIR Sensor Lighting System flow diagram: human movement detected by HC-SR501 PIR sensor, processed by Arduino Uno (30s timer) to switch 5V relay for room light and fan",
+        caption: "System Architecture & Flow: Human Movement → HC-SR501 PIR Sensor → Arduino Uno → 5V Relay → Room Light & Fan",
+        approved: true,
+        contain: true,
+      },
+    ],
+    links: { github: "https://github.com/cyphercrux/PIR-system", demo: null, docs: null, video: null },
     publicNote: null,
     editorNotes: [
       "Cover photo held back until you confirm it is a photo of your own build (see chat).",
