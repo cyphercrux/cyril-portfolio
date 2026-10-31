@@ -65,7 +65,7 @@ export default function Hero() {
           }}
         >
           <Image
-            src="/images/hero/cyril-portfolio-hero.jpg"
+            src="/images/hero/cyril-portfolio-hero.webp"
             alt="Cyril Portfolio - Liquid metal artwork in neon lime, royal purple, and deep black"
             fill
             priority

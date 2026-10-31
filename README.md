@@ -6,7 +6,7 @@ A premium, futuristic, engineering-focused personal portfolio website for **Cyri
 
 ---
 
-## ⚡ Brand & Visual Identity
+## Brand & Visual Identity
 
 - **Visual Balance**: 65% Black foundation (`#050505`, `#09090B`), 20% Neon Lime (`#C6FF00`, `#B8FF3B`), 15% Royal Purple & Deep Violet (`#7C3AED`, `#35105F`, `#A855F7`).
 - **Display Typography**: **Proxon** bold display font paired with **Space Grotesk** for clean, legible body copy and technical case studies.
@@ -17,7 +17,7 @@ A premium, futuristic, engineering-focused personal portfolio website for **Cyri
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Framework**: Next.js 15 (App Router, Static Site Generation / SSG)
 - **Language**: TypeScript
@@ -28,7 +28,7 @@ A premium, futuristic, engineering-focused personal portfolio website for **Cyri
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 cyril-portfolio/
@@ -86,7 +86,7 @@ cyril-portfolio/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -128,7 +128,7 @@ node .next/standalone/server.js
 
 ---
 
-## 👤 Author
+## Author
 
 **Cyril William**
 - **Email**: [cyrilwilliam2003@gmail.com](mailto:cyrilwilliam2003@gmail.com)

@@ -14,13 +14,13 @@ export const site = {
     resume: null as string | null, // set once a public resume PDF is chosen, e.g. "/Cyril_William_Resume.pdf"
   },
   images: {
-    portrait: "/images/personal/portrait-hero-current.jpg",
-    portraitAlt: "Cyril William smiling with arms crossed on college campus",
+    portrait: "/images/personal/portrait-about.webp",
+    portraitAlt: "Cyril William smiling in a blue shirt with arms crossed",
   },
 } as const;
 
 export const about = {
-  aboutPortrait: "/images/personal/portrait-hero-current.jpg",
+  aboutPortrait: "/images/personal/portrait-about.webp",
   intro: "I’m an Electrical Engineering student and aspiring engineer: curious, hands-on and adaptable, with a habit of combining physical hardware with software and intelligent systems.",
   education: [
     { what: "Bachelor of Electrical Engineering", where: "University of Mumbai", note: "Fr. C. Rodrigues Institute of Technology, Vashi" },

@@ -45,7 +45,24 @@ export default async function Page({ params }: P) {
       {p.challengesAndLearnings && <Sec t="Challenges and learnings"><p>{p.challengesAndLearnings}</p></Sec>}
       <Sec t="Outcome"><p>{p.outcome}</p>{p.publicNote && <p className="note">{p.publicNote}</p>}</Sec>
       {gallery.length > 0 && <Sec t="Gallery"><Lightbox images={gallery} /></Sec>}
-      {links.length > 0 && <Sec t="Links"><div className="row">{links.map(([k, v]) => <a key={k} className="btn ghost" href={v}>{k}</a>)}</div></Sec>}
+      {links.length > 0 && (
+        <Sec t="Codebase & Links">
+          <div className="row">
+            {links.map(([k, v]) => (
+              <a
+                key={k}
+                className="btn ghost"
+                href={v}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-cursor="CODE"
+              >
+                {k === "github" ? "GitHub Codebase" : k} ↗
+              </a>
+            ))}
+          </div>
+        </Sec>
+      )}
       <section className="pn">
         <Link href={`/projects/${prev.slug}`} data-cursor="PREV">← {prev.shortTitle}</Link>
         <Link href={`/projects/${next.slug}`} data-cursor="NEXT">{next.shortTitle} →</Link>

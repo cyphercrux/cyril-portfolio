@@ -59,5 +59,5 @@ export function ScrollProgress() {
 
 export function Egg() {
   const [o, s] = useState(false);
-  return <button className="egg" onClick={() => s(!o)} aria-pressed={o}>{o ? "⚡ Circuit closed. Hello there." : "○ open circuit"}</button>;
+  return <button className="egg" onClick={() => s(!o)} aria-pressed={o}>{o ? "Circuit closed. Hello there." : "Open circuit"}</button>;
 }

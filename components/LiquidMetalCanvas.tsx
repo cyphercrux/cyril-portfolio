@@ -63,7 +63,7 @@ export default function LiquidMetalCanvas({ onFallback }: LiquidMetalCanvasProps
     // Load Cyril's supplied liquid gradient hero artwork
     const loader = new THREE.TextureLoader();
     loader.load(
-      "/images/hero/cyril-portfolio-hero.jpg",
+      "/images/hero/cyril-portfolio-hero.webp",
       (tex) => {
         tex.minFilter = THREE.LinearFilter;
         tex.magFilter = THREE.LinearFilter;

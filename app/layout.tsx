@@ -26,6 +26,13 @@ export const metadata: Metadata = {
     "Portfolio",
   ],
   authors: [{ name: "Cyril William" }],
+  icons: {
+    icon: [
+      { url: "/icon.png", type: "image/png" },
+      { url: "/icon.webp", type: "image/webp" },
+    ],
+    apple: "/apple-icon.png",
+  },
   openGraph: {
     title: "Cyril William | Electrical Engineering, IoT & EV Technology",
     description:
@@ -34,10 +41,10 @@ export const metadata: Metadata = {
     locale: "en_IN",
     images: [
       {
-        url: "/images/hero/cyril-portfolio-hero.jpg",
+        url: "/images/og/opengraph-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Cyril William Portfolio - Electrical Engineering & IoT",
+        alt: "Cyril William Portfolio - Electrical Engineering, IoT & EV Technology",
       },
     ],
   },
@@ -46,7 +53,7 @@ export const metadata: Metadata = {
     title: "Cyril William | Electrical Engineering, IoT & EV Technology",
     description:
       "Explore Cyril William's electrical engineering projects, industrial panel testing experience, embedded systems, IoT development, and EV battery monitoring work.",
-    images: ["/images/hero/cyril-portfolio-hero.jpg"],
+    images: ["/images/og/opengraph-image.jpg"],
   },
 };
 

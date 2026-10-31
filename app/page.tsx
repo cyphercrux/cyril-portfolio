@@ -80,7 +80,7 @@ export default function Home() {
           </p>
           <div className="row" style={{ justifyContent: "center" }}>
             <a className="btn" href={`mailto:${site.email}`} data-cursor="MAIL">
-              Send Me an Email ({site.email}) &rarr;
+              {site.email}
             </a>
             <Link className="btn ghost" href="/contact" data-cursor="CONTACT">
               Visit Contact Page

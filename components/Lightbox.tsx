@@ -23,7 +23,7 @@ export default function Lightbox({ images, contain = false }: { images: I[]; con
       ))}</div>
       {cur && i !== null && (
         <div className="lb" role="dialog" aria-modal="true" aria-label="Image viewer" onClick={() => s(null)}>
-          <button className="lb-x" autoFocus onClick={() => s(null)} aria-label="Close">✕</button>
+          <button className="lb-x" autoFocus onClick={() => s(null)} aria-label="Close">&times;</button>
           {n > 1 && <button className="lb-n l" onClick={(e) => { e.stopPropagation(); s((i + n - 1) % n); }} aria-label="Previous image">‹</button>}
           <figure onClick={(e) => e.stopPropagation()}>
             {/* eslint-disable-next-line @next/next/no-img-element */}

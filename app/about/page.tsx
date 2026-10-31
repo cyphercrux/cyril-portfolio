@@ -15,7 +15,7 @@ export default function About() {
           </div>
           <div className="portrait-wrapper">
             <div className="portrait">
-              <Img sizes="(max-width:900px) 80vw, 310px" img={{ src: about.aboutPortrait, alt: "Cyril William smiling in a blue suit in front of palm trees", approved: true }} />
+              <Img sizes="(max-width:900px) 80vw, 310px" img={{ src: about.aboutPortrait, alt: "Cyril William smiling in a blue shirt with arms crossed", approved: true }} />
             </div>
           </div>
         </div>
