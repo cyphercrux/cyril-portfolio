@@ -30,6 +30,19 @@ export default async function Page({ params }: P) {
         <p className="st">
           <span style={{ color: "var(--lime)", fontWeight: 600 }}>{p.status}</span> &middot; {p.categories.join(" · ")}
         </p>
+        {p.links.github && (
+          <div style={{ marginTop: "16px", marginBottom: "8px" }}>
+            <a
+              className="btn"
+              href={p.links.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cursor="CODE"
+            >
+              GitHub Code ↗
+            </a>
+          </div>
+        )}
         <div className="hero-img"><Img img={p.cover} priority sizes="(max-width:1120px) 100vw, 1120px" /></div>
       </section>
       <Sec t="Overview">{p.overview.map((t) => <p key={t}>{t}</p>)}<div>{p.technologies.map((t) => <span className="tag" key={t}>{t}</span>)}</div></Sec>

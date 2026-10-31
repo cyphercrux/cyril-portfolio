@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Img from "./Img";
-type I = { src: string; alt: string; caption?: string; approved: boolean };
+type I = { src: string; alt: string; caption?: string; approved: boolean; contain?: boolean };
 export default function Lightbox({ images, contain = false }: { images: I[]; contain?: boolean }) {
   const [i, s] = useState<number | null>(null); const n = images.length;
   useEffect(() => {
@@ -18,9 +18,14 @@ export default function Lightbox({ images, contain = false }: { images: I[]; con
   const cur = i === null ? null : images[i];
   return (
     <>
-      <div className="thumbs">{images.map((m, j) => (
-        <button key={m.src} className={"thumb" + (contain ? " contain" : "")} onClick={() => s(j)} data-cursor="VIEW" aria-label={`Open image: ${m.caption || m.alt}`}><Img img={m} contain={contain} sizes="240px" /></button>
-      ))}</div>
+      <div className="thumbs">{images.map((m, j) => {
+        const isContain = m.contain ?? contain;
+        return (
+          <button key={m.src} className={"thumb" + (isContain ? " contain" : "")} onClick={() => s(j)} data-cursor="VIEW" aria-label={`Open image: ${m.caption || m.alt}`}>
+            <Img img={m} contain={isContain} sizes="240px" />
+          </button>
+        );
+      })}</div>
       {cur && i !== null && (
         <div className="lb" role="dialog" aria-modal="true" aria-label="Image viewer" onClick={() => s(null)}>
           <button className="lb-x" autoFocus onClick={() => s(null)} aria-label="Close">&times;</button>

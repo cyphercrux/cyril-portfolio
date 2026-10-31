@@ -9,7 +9,7 @@ export type Status = "completed" | "prototype" | "ongoing" | "planned";
 export type Category =
   | "Electrical Engineering" | "Embedded Systems" | "IoT and Automation" | "EV Technology" | "Electronics";
 
-export interface Img { src: string; alt: string; caption?: string; approved: boolean }
+export interface Img { src: string; alt: string; caption?: string; approved: boolean; contain?: boolean }
 
 export interface Project {
   slug: string;
@@ -134,7 +134,7 @@ export const projects: Project[] = [
       "Compact, perfboard-based hardware assembly.",
       "Expandable foundation for Wi-Fi-enabled automation.",
     ],
-    technologies: ["ESP8266", "Electromechanical Relays", "Wi-Fi", "Embedded C/C++", "Perfboard Prototyping"],
+    technologies: ["ESP8266", "Blynk IoT", "Electromechanical Relays", "Wi-Fi", "Embedded C/C++", "Perfboard Prototyping"],
     hardwareAndSoftware: null,
     contribution: null,
     implementation: null,
@@ -144,8 +144,16 @@ export const projects: Project[] = [
       "Successfully built and tested a functional four-channel relay switching prototype, demonstrating reliable remote load management, reduced standby electricity consumption, and a modular architecture for campus-wide IoT automation.",
     cover: { src: `${P}/classroom-automation/cover.webp`, alt: "Perfboard with an ESP8266 NodeMCU board, four relays, diodes, transistors and screw terminals", approved: true },
     diagrams: [],
-    gallery: [],
-    links: { github: "https://github.com/cyphercrux/classroom-automation", demo: null, docs: null, video: null },
+    gallery: [
+      {
+        src: `${P}/classroom-automation/smart-classroom-architecture.webp`,
+        alt: "Smart Classroom Automation Architecture (Blynk + ESP8266 + 4 Channel Relay)",
+        caption: "Smart Classroom Automation Architecture (Blynk + ESP8266 + 4 Channel Relay)",
+        approved: true,
+        contain: true,
+      },
+    ],
+    links: { github: "https://github.com/cyphercrux/Classroom-automation", demo: null, docs: null, video: null },
     publicNote: null,
     editorNotes: [
       "Resume says Blynk app integration and reduced energy consumption; your long description does not claim these. Confirm what was actually built and measured before adding either.",
