@@ -194,9 +194,11 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.6rem); }
   font: inherit;
   font-weight: 600;
   cursor: pointer;
-  transition: transform 0.15s, box-shadow 0.25s, background 0.2s;
+  transition: transform 0.15s, box-shadow 0.25s, background 0.2s, color 0.2s;
 }
 .btn:hover {
+  background: #050505;
+  color: var(--lime);
   box-shadow: 0 0 28px rgba(198, 255, 0, 0.4);
   transform: translateY(-2px);
 }
