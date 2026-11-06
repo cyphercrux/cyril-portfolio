@@ -3,7 +3,24 @@
 /* ==========================================================================
    CYRIL WILLIAM — VISUAL IDENTITY & DESIGN SYSTEM
    Dominant Palette: 65% Black, 20% Lime Green, 15% Purple
+   Display Typography: Astera (from DaFont)
    ========================================================================== */
+
+@font-face {
+  font-family: "Astera";
+  src: url("/fonts/Astera.ttf") format("truetype");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("/fonts/SpaceGrotesk-Variable.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
   /* Color Tokens */
@@ -32,9 +49,9 @@
   --border-card: #29292e;
   --border-focus: #c6ff00;
 
-  /* Typography */
-  --font-display: 'Anton', 'Space Grotesk', -apple-system, sans-serif;
-  --font-heading: 'Space Grotesk', 'Inter', sans-serif;
+  /* Typography: Astera for Display & Headings */
+  --font-display: 'Astera', 'Space Grotesk', -apple-system, sans-serif;
+  --font-heading: 'Astera', 'Space Grotesk', sans-serif;
   --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
@@ -95,15 +112,16 @@ body {
 
 /* Typography Utilities */
 h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
   color: var(--text-primary);
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.04em;
   line-height: 1.15;
 }
 
 .font-display {
   font-family: var(--font-display);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
@@ -193,7 +211,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-size: 0.9rem;
   font-weight: 600;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
   text-decoration: none;
   cursor: pointer;
   border: 1px solid transparent;
