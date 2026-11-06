@@ -39,7 +39,7 @@ export default function SwarmFinale({ onNavigate }) {
     <section
       id="swarm-finale"
       ref={finaleRef}
-      className="relative py-28 sm:py-36 bg-[#030303] border-b border-[#222226] overflow-hidden flex flex-col items-center justify-center text-center"
+      className="relative py-36 sm:py-48 bg-[#030303] border-b border-[#222226] overflow-hidden flex flex-col items-center justify-center text-center"
     >
       {/* Radial Spotlight Background */}
       <div
@@ -53,7 +53,7 @@ export default function SwarmFinale({ onNavigate }) {
       <div className="container relative z-10 max-w-4xl px-4 flex flex-col items-center">
         {/* Technical Swarm Status Indicator */}
         <SelectionReveal id="swarm-indicator" outlineColor="lime">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-medium tracking-wider text-[#C6FF00] bg-[#C6FF00]/10 border border-[#C6FF00]/30 mb-8">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono font-medium tracking-wider text-[#C6FF00] bg-[#C6FF00]/10 border border-[#C6FF00]/30 mb-10">
             <span className="w-2 h-2 rounded-full bg-[#C6FF00] animate-ping" />
             <Sparkles className="w-3.5 h-3.5" />
             <span>COORDINATED SWARM MODE // FISH-SCHOOL DYNAMICS ACTIVE</span>
@@ -62,21 +62,21 @@ export default function SwarmFinale({ onNavigate }) {
 
         {/* Main Finale Display Headline */}
         <SelectionReveal id="finale-main-headline" outlineColor="purple" delay={200}>
-          <h2 className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight text-[#F5F5F5] uppercase mb-4 leading-none">
+          <h2 className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight text-[#F5F5F5] uppercase mb-6 leading-[1.12]">
             THANKS FOR <span className="text-[#C6FF00]">EXPLORING</span> MY WORLD.
           </h2>
         </SelectionReveal>
 
         {/* Subhead */}
         <SelectionReveal id="finale-subhead" outlineColor="lime" delay={400}>
-          <p className="font-heading text-xl sm:text-2xl md:text-3xl text-[#A1A1AA] font-light mb-10 tracking-tight">
+          <p className="font-heading text-xl sm:text-2xl md:text-3xl text-[#A1A1AA] font-light mb-14 tracking-tight">
             Let's build something meaningful.
           </p>
         </SelectionReveal>
 
         {/* Closing Call to Action Button */}
         <SelectionReveal id="finale-cta-button" outlineColor="lime" delay={600}>
-          <div className="flex flex-wrap items-center justify-center gap-4">
+          <div className="flex flex-wrap items-center justify-center gap-5">
             <a
               href="#contact"
               onClick={(e) => {
@@ -103,7 +103,7 @@ export default function SwarmFinale({ onNavigate }) {
         </SelectionReveal>
 
         {/* Swarm Description Tag */}
-        <p className="mt-12 text-xs font-mono text-[#52525b] max-w-md">
+        <p className="mt-16 text-xs font-mono text-[#52525b] max-w-md leading-relaxed">
           Autonomous simulated agents have synchronized into a Reynolds Boids school formation. Move your pointer across the canvas to interact with the flock.
         </p>
       </div>

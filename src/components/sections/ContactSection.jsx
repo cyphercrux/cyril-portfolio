@@ -92,37 +92,37 @@ export default function ContactSection() {
     <section id="contact" className="section-padding border-b border-[#222226] relative">
       <div className="container">
         {/* Section Header */}
-        <div className="max-w-3xl mb-16">
+        <div className="max-w-3xl mb-20">
           <SelectionReveal id="contact-badge" outlineColor="lime">
-            <div className="pill pill-lime mb-3">
+            <div className="pill pill-lime mb-5">
               <span>05 // INITIATE TRANSMISSION</span>
             </div>
           </SelectionReveal>
 
           <SelectionReveal id="contact-title" outlineColor="purple" delay={150}>
-            <h2 className="font-display text-4xl sm:text-6xl text-[#F5F5F5] uppercase tracking-tight mb-4">
+            <h2 className="font-display text-4xl sm:text-6xl text-[#F5F5F5] uppercase tracking-tight mb-6">
               LET'S BUILD <span className="text-[#C6FF00]">SOMETHING MEANINGFUL.</span>
             </h2>
           </SelectionReveal>
 
           <SelectionReveal id="contact-desc" outlineColor="lime" delay={300}>
-            <p className="text-base text-[#A1A1AA] leading-relaxed">
+            <p className="text-base sm:text-lg text-[#A1A1AA] leading-relaxed">
               Open to engineering internships, junior engineering roles, hardware research collaborations, and embedded IoT discussions.
             </p>
           </SelectionReveal>
         </div>
 
         {/* Contact Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
           {/* Left Column: Direct Contact Info & Socials */}
-          <div className="lg:col-span-5 flex flex-col gap-6">
+          <div className="lg:col-span-5 flex flex-col gap-8">
             {/* Email Card with One-Click Copy */}
             <SelectionReveal id="contact-email-card" outlineColor="lime" delay={200}>
               <div className="editorial-card group">
-                <span className="text-[11px] font-mono text-[#71717A] uppercase tracking-wider block mb-1">
+                <span className="text-[11px] font-mono text-[#71717A] uppercase tracking-wider block mb-2">
                   DIRECT EMAIL INBOX
                 </span>
-                <div className="flex items-center justify-between gap-3">
+                <div className="flex items-center justify-between gap-4">
                   <a
                     href={`mailto:${siteConfig.email}`}
                     className="font-heading font-bold text-base sm:text-lg text-[#F5F5F5] hover:text-[#C6FF00] transition-colors break-all"
@@ -132,7 +132,7 @@ export default function ContactSection() {
                   <button
                     onClick={() => copyToClipboard(siteConfig.email)}
                     title="Copy Email Address"
-                    className="p-2 rounded bg-[#18181c] border border-[#2d2d35] text-[#A1A1AA] hover:text-[#C6FF00] transition-colors cursor-pointer shrink-0"
+                    className="p-2.5 rounded bg-[#18181c] border border-[#2d2d35] text-[#A1A1AA] hover:text-[#C6FF00] transition-colors cursor-pointer shrink-0"
                   >
                     {copiedEmail ? (
                       <Check className="w-4 h-4 text-[#C6FF00]" />
@@ -147,10 +147,10 @@ export default function ContactSection() {
             {/* Geographic Location */}
             <SelectionReveal id="contact-location-card" outlineColor="purple" delay={300}>
               <div className="editorial-card">
-                <span className="text-[11px] font-mono text-[#71717A] uppercase tracking-wider block mb-1">
+                <span className="text-[11px] font-mono text-[#71717A] uppercase tracking-wider block mb-2">
                   LOCATION &amp; RESIDENCE
                 </span>
-                <div className="flex items-center gap-3 text-[#F5F5F5] font-heading font-semibold text-base">
+                <div className="flex items-center gap-3 text-[#F5F5F5] font-heading font-semibold text-base sm:text-lg">
                   <MapPin className="w-4 h-4 text-[#A855F7]" />
                   <span>{siteConfig.location}</span>
                 </div>
@@ -160,15 +160,15 @@ export default function ContactSection() {
             {/* Professional Profiles */}
             <SelectionReveal id="contact-socials-card" outlineColor="lime" delay={400}>
               <div className="editorial-card">
-                <span className="text-[11px] font-mono text-[#71717A] uppercase tracking-wider block mb-4">
+                <span className="text-[11px] font-mono text-[#71717A] uppercase tracking-wider block mb-5">
                   CONNECTED NETWORKS
                 </span>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
                   <a
                     href={siteConfig.social.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 rounded-lg bg-[#141418] border border-[#26262e] hover:border-[#A855F7] flex flex-col items-center gap-2 group transition-all"
+                    className="p-3.5 rounded-lg bg-[#141418] border border-[#26262e] hover:border-[#A855F7] flex flex-col items-center gap-2 group transition-all"
                   >
                     <Linkedin className="w-5 h-5 text-[#A855F7] group-hover:scale-110 transition-transform" />
                     <span className="text-xs font-mono text-[#A1A1AA] group-hover:text-[#F5F5F5]">
@@ -180,7 +180,7 @@ export default function ContactSection() {
                     href={siteConfig.social.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 rounded-lg bg-[#141418] border border-[#26262e] hover:border-[#C6FF00] flex flex-col items-center gap-2 group transition-all"
+                    className="p-3.5 rounded-lg bg-[#141418] border border-[#26262e] hover:border-[#C6FF00] flex flex-col items-center gap-2 group transition-all"
                   >
                     <Github className="w-5 h-5 text-[#C6FF00] group-hover:scale-110 transition-transform" />
                     <span className="text-xs font-mono text-[#A1A1AA] group-hover:text-[#F5F5F5]">
@@ -192,7 +192,7 @@ export default function ContactSection() {
                     href={siteConfig.social.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 rounded-lg bg-[#141418] border border-[#26262e] hover:border-[#A855F7] flex flex-col items-center gap-2 group transition-all"
+                    className="p-3.5 rounded-lg bg-[#141418] border border-[#26262e] hover:border-[#A855F7] flex flex-col items-center gap-2 group transition-all"
                   >
                     <Instagram className="w-5 h-5 text-[#A855F7] group-hover:scale-110 transition-transform" />
                     <span className="text-xs font-mono text-[#A1A1AA] group-hover:text-[#F5F5F5]">
@@ -208,7 +208,7 @@ export default function ContactSection() {
           <div className="lg:col-span-7">
             <SelectionReveal id="contact-form-card" outlineColor="purple" delay={300}>
               <div className="editorial-card bg-[#0e0e11] border-[#292930]">
-                <h3 className="font-heading font-bold text-xl text-[#F5F5F5] mb-6 flex items-center justify-between">
+                <h3 className="font-heading font-bold text-xl sm:text-2xl text-[#F5F5F5] mb-8 flex items-center justify-between">
                   <span>Send a Direct Message</span>
                   <span className="text-xs font-mono font-normal text-[#71717A]">
                     Encrypted Transmission
@@ -216,12 +216,12 @@ export default function ContactSection() {
                 </h3>
 
                 {isSubmitted ? (
-                  <div className="p-6 rounded-lg bg-[#102014] border border-[#1b4322] flex flex-col items-center text-center gap-3">
-                    <CheckCircle2 className="w-10 h-10 text-[#C6FF00]" />
-                    <h4 className="font-heading font-bold text-lg text-[#F5F5F5]">
+                  <div className="p-8 rounded-lg bg-[#102014] border border-[#1b4322] flex flex-col items-center text-center gap-4">
+                    <CheckCircle2 className="w-12 h-12 text-[#C6FF00]" />
+                    <h4 className="font-heading font-bold text-xl text-[#F5F5F5]">
                       Message Initiated
                     </h4>
-                    <p className="text-xs sm:text-sm text-[#A1A1AA] max-w-md">
+                    <p className="text-sm text-[#A1A1AA] max-w-md leading-relaxed">
                       Your default email application has opened with the message pre-filled. If it didn't trigger, feel free to email me directly at{" "}
                       <span className="text-[#C6FF00] font-mono">{siteConfig.email}</span>.
                     </p>
@@ -236,10 +236,10 @@ export default function ContactSection() {
                     </button>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-4">
+                  <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-6">
                     {/* Name & Email Row */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      <div className="flex flex-col gap-1.5">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                      <div className="flex flex-col gap-2">
                         <label className="text-xs font-mono text-[#A1A1AA] uppercase tracking-wide">
                           Your Name <span className="text-[#C6FF00]">*</span>
                         </label>
@@ -249,7 +249,7 @@ export default function ContactSection() {
                           value={formData.name}
                           onChange={handleChange}
                           placeholder="e.g. Alex Sharma"
-                          className={`w-full px-3.5 py-2.5 rounded bg-[#151518] border text-sm text-[#F5F5F5] focus:outline-none focus:border-[#C6FF00] transition-colors ${
+                          className={`w-full px-4 py-3 rounded bg-[#151518] border text-sm text-[#F5F5F5] focus:outline-none focus:border-[#C6FF00] transition-colors ${
                             errors.name ? "border-red-500" : "border-[#28282e]"
                           }`}
                         />
@@ -261,7 +261,7 @@ export default function ContactSection() {
                         )}
                       </div>
 
-                      <div className="flex flex-col gap-1.5">
+                      <div className="flex flex-col gap-2">
                         <label className="text-xs font-mono text-[#A1A1AA] uppercase tracking-wide">
                           Your Email <span className="text-[#C6FF00]">*</span>
                         </label>
@@ -271,7 +271,7 @@ export default function ContactSection() {
                           value={formData.email}
                           onChange={handleChange}
                           placeholder="alex@domain.com"
-                          className={`w-full px-3.5 py-2.5 rounded bg-[#151518] border text-sm text-[#F5F5F5] focus:outline-none focus:border-[#C6FF00] transition-colors ${
+                          className={`w-full px-4 py-3 rounded bg-[#151518] border text-sm text-[#F5F5F5] focus:outline-none focus:border-[#C6FF00] transition-colors ${
                             errors.email ? "border-red-500" : "border-[#28282e]"
                           }`}
                         />
@@ -285,7 +285,7 @@ export default function ContactSection() {
                     </div>
 
                     {/* Subject Field */}
-                    <div className="flex flex-col gap-1.5">
+                    <div className="flex flex-col gap-2">
                       <label className="text-xs font-mono text-[#A1A1AA] uppercase tracking-wide">
                         Subject <span className="text-[#C6FF00]">*</span>
                       </label>
@@ -295,7 +295,7 @@ export default function ContactSection() {
                         value={formData.subject}
                         onChange={handleChange}
                         placeholder="e.g. Engineering Internship Inquiry"
-                        className={`w-full px-3.5 py-2.5 rounded bg-[#151518] border text-sm text-[#F5F5F5] focus:outline-none focus:border-[#C6FF00] transition-colors ${
+                        className={`w-full px-4 py-3 rounded bg-[#151518] border text-sm text-[#F5F5F5] focus:outline-none focus:border-[#C6FF00] transition-colors ${
                           errors.subject ? "border-red-500" : "border-[#28282e]"
                         }`}
                       />
@@ -308,17 +308,17 @@ export default function ContactSection() {
                     </div>
 
                     {/* Message Field */}
-                    <div className="flex flex-col gap-1.5">
+                    <div className="flex flex-col gap-2">
                       <label className="text-xs font-mono text-[#A1A1AA] uppercase tracking-wide">
                         Message <span className="text-[#C6FF00]">*</span>
                       </label>
                       <textarea
-                        rows={4}
+                        rows={5}
                         name="message"
                         value={formData.message}
                         onChange={handleChange}
                         placeholder="Share project details, opportunities or questions..."
-                        className={`w-full px-3.5 py-2.5 rounded bg-[#151518] border text-sm text-[#F5F5F5] focus:outline-none focus:border-[#C6FF00] transition-colors resize-none ${
+                        className={`w-full px-4 py-3 rounded bg-[#151518] border text-sm text-[#F5F5F5] focus:outline-none focus:border-[#C6FF00] transition-colors resize-none ${
                           errors.message ? "border-red-500" : "border-[#28282e]"
                         }`}
                       />
@@ -334,7 +334,7 @@ export default function ContactSection() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="btn btn-primary mt-2 w-full justify-center"
+                      className="btn btn-primary mt-3 py-3 w-full justify-center text-sm font-semibold"
                     >
                       {isSubmitting ? (
                         <span>Transmitting Payload...</span>

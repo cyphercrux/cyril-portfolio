@@ -12,9 +12,9 @@ export default function Footer({ onNavigate }) {
   };
 
   return (
-    <footer className="bg-[#050505] border-t border-[#1a1a1f] py-12 text-[#71717A]">
+    <footer className="bg-[#050505] border-t border-[#1a1a1f] py-16 text-[#71717A]">
       <div className="container">
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 pb-10 border-b border-[#1a1a1f]">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-10 pb-12 border-b border-[#1a1a1f]">
           {/* Brand & Tagline */}
           <div className="flex flex-col">
             <span className="font-heading font-bold text-base text-[#F5F5F5] uppercase tracking-wider mb-1">

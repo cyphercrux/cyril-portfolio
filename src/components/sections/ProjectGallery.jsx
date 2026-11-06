@@ -26,10 +26,10 @@ export default function ProjectGallery() {
     <section id="projects" className="section-padding border-b border-[#222226] relative">
       <div className="container">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div>
             <SelectionReveal id="projects-badge" outlineColor="lime">
-              <div className="pill pill-lime mb-3">
+              <div className="pill pill-lime mb-4">
                 <span>04 // HARDWARE &amp; EMBEDDED SYSTEMS</span>
               </div>
             </SelectionReveal>
@@ -42,7 +42,7 @@ export default function ProjectGallery() {
           </div>
 
           <SelectionReveal id="projects-desc" outlineColor="lime" delay={250}>
-            <p className="text-sm font-mono text-[#A1A1AA] max-w-md">
+            <p className="text-sm sm:text-base font-mono text-[#A1A1AA] max-w-md leading-relaxed">
               Bridging electrical power hardware with intelligent telemetry, microcontrollers, and cloud IoT architectures.
             </p>
           </SelectionReveal>
@@ -50,14 +50,14 @@ export default function ProjectGallery() {
 
         {/* Category Filters */}
         <SelectionReveal id="projects-filter-bar" outlineColor="purple" delay={200}>
-          <div className="flex flex-wrap items-center gap-2 mb-12 pb-4 border-b border-[#222226]">
+          <div className="flex flex-wrap items-center gap-3 mb-16 pb-6 border-b border-[#222226]">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-4 py-1.5 rounded-full text-xs font-mono font-medium tracking-wide transition-all duration-200 cursor-pointer ${
+                className={`px-4 py-2 rounded-full text-xs font-mono font-medium tracking-wide transition-all duration-200 cursor-pointer ${
                   selectedCategory === cat
-                    ? "bg-[#C6FF00] text-[#050505] font-bold shadow-[0_0_12px_rgba(198,255,0,0.2)]"
+                    ? "bg-[#C6FF00] text-[#050505] font-bold shadow-[0_0_14px_rgba(198,255,0,0.25)]"
                     : "bg-[#141416] text-[#A1A1AA] hover:text-[#F5F5F5] hover:bg-[#1a1a1f] border border-[#292929]"
                 }`}
               >
@@ -68,7 +68,7 @@ export default function ProjectGallery() {
         </SelectionReveal>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-12">
           {filteredProjects.map((project, index) => (
             <SelectionReveal
               key={project.id}
@@ -79,7 +79,7 @@ export default function ProjectGallery() {
               <div className="editorial-card group flex flex-col justify-between h-full bg-[#101012] hover:border-[#383840] transition-all duration-300">
                 <div>
                   {/* Card Media Container */}
-                  <div className="relative aspect-video w-full rounded-lg overflow-hidden bg-[#0a0a0c] mb-6 border border-[#222226]">
+                  <div className="relative aspect-video w-full rounded-lg overflow-hidden bg-[#0a0a0c] mb-7 border border-[#222226]">
                     <img
                       src={project.coverImage}
                       alt={project.coverAlt}
@@ -106,7 +106,7 @@ export default function ProjectGallery() {
                   </div>
 
                   {/* Title & Description */}
-                  <h3 className="font-heading font-bold text-xl sm:text-2xl text-[#F5F5F5] group-hover:text-[#C6FF00] transition-colors mb-3 leading-snug">
+                  <h3 className="font-heading font-bold text-xl sm:text-2xl text-[#F5F5F5] group-hover:text-[#C6FF00] transition-colors mb-4 leading-snug">
                     {project.title}
                   </h3>
 
@@ -115,17 +115,17 @@ export default function ProjectGallery() {
                   </p>
 
                   {/* Technology Tags */}
-                  <div className="flex flex-wrap gap-1.5 mb-6">
+                  <div className="flex flex-wrap gap-2 mb-7">
                     {project.technologies.slice(0, 4).map((tech) => (
                       <span
                         key={tech}
-                        className="px-2 py-0.5 rounded text-[10px] font-mono bg-[#16161a] text-[#A1A1AA] border border-[#28282e]"
+                        className="px-2.5 py-1 rounded text-[11px] font-mono bg-[#16161a] text-[#A1A1AA] border border-[#28282e]"
                       >
                         {tech}
                       </span>
                     ))}
                     {project.technologies.length > 4 && (
-                      <span className="px-2 py-0.5 rounded text-[10px] font-mono bg-[#16161a] text-[#71717A] border border-[#28282e]">
+                      <span className="px-2.5 py-1 rounded text-[11px] font-mono bg-[#16161a] text-[#71717A] border border-[#28282e]">
                         +{project.technologies.length - 4} more
                       </span>
                     )}
@@ -133,7 +133,7 @@ export default function ProjectGallery() {
                 </div>
 
                 {/* Bottom Action Bar */}
-                <div className="pt-4 border-t border-[#222226] flex items-center justify-between">
+                <div className="pt-6 border-t border-[#222226] flex items-center justify-between">
                   <button
                     onClick={() => setActiveProject(project)}
                     className="btn btn-primary text-xs w-full sm:w-auto"
