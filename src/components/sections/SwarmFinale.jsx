@@ -110,3 +110,4 @@ export default function SwarmFinale({ onNavigate }) {
     </section>
   );
 }
+

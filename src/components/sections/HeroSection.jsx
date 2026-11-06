@@ -204,3 +204,4 @@ export default function HeroSection({ onNavigate }) {
     </section>
   );
 }
+

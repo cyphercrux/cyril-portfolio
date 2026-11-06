@@ -300,3 +300,4 @@ export default function ProjectDialog({ project, isOpen, onClose }) {
     </div>
   );
 }
+

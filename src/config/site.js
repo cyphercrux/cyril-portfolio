@@ -53,3 +53,4 @@ export const siteConfig = {
     { label: "Contact", href: "#contact", page: "contact" },
   ],
 };
+
